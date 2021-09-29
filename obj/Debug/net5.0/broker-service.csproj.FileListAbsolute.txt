@@ -142,3 +142,4 @@ C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\brok
 C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\obj\Debug\net5.0\ref\broker-service.dll
 C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\obj\Debug\net5.0\broker-service.pdb
 C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\obj\Debug\net5.0\broker-service.genruntimeconfig.cache
+C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\bin\Debug\net5.0\package-lock.json
