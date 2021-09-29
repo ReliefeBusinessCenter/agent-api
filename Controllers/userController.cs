@@ -132,20 +132,20 @@ namespace Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser(UserDto userDto)
         {
-            Console.WriteLine("Creating Users");
-            var user = _mapper.Map<User>(userDto);
-             Console.WriteLine("Entered to the image upload");
+            // Console.WriteLine("Creating Users");
+            // var user = _mapper.Map<User>(userDto);
+            //  Console.WriteLine("Entered to the image upload");
 
-            string fName = userDto.Picture.FileName;
-            Console.WriteLine(fName);
-            string path = Path.Combine(_environment.ContentRootPath, "Images/" + userDto.Picture.FileName);
-            using (var stream = new FileStream(path, FileMode.Create))
-            { 
-                await userDto.Picture.CopyToAsync(stream);
-            }
-            // return file.FileName;
-            user.Picture=userDto.Picture.FileName;
-            await _userRepository.UpdateData(user);
+            // string fName = userDto.Picture.FileName;
+            // Console.WriteLine(fName);
+            // string path = Path.Combine(_environment.ContentRootPath, "Images/" + userDto.Picture.FileName);
+            // using (var stream = new FileStream(path, FileMode.Create))
+            // { 
+            //     await userDto.Picture.CopyToAsync(stream);
+            // }
+            // // return file.FileName;
+            // user.Picture=userDto.Picture.FileName;
+            // await _userRepository.UpdateData(user);
             return Ok(userDto);
         }
         //   [Authorize(AuthenticationSchemes=JwtBearerDefaults.AuthenticationScheme,Roles = "Admin")]
