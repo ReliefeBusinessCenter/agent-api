@@ -17,6 +17,15 @@ namespace broker.Dto
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
 
+        
+        // public string Picture { get; set; }
+
+        public string Sex { get; set; }
+        
+        public string Role { get; set; }
+        // 
+   
+
         public string FullName { get; set; }
 
         public string Email { get; set; }
@@ -26,13 +35,14 @@ namespace broker.Dto
         public string Phone { get; set; }
 
         public string Address { get; set; }
- [FromForm]
-        public IFormFile Picture { get; set; }
-        // public string Picture { get; set; }
+
+        public string Picture { get; set; }
 
         public string Sex { get; set; }
         
         public string Role { get; set; }
+
+        public ICollection<Buy> Buys { get; set; }
 
 
 
