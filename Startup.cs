@@ -39,7 +39,7 @@ namespace broker_service
             
             services.AddControllers();
 
-            var appSettingsSection = Configuration.GetSection("AppSettings");
+           var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
             // configure jwt authentication
