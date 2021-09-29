@@ -134,7 +134,7 @@ namespace Controllers
         {
             Console.WriteLine("Creating Users");
             var user = _mapper.Map<User>(userDto);
-             Console.WriteLine("Entered tot he image upload");
+             Console.WriteLine("Entered to the image upload");
 
             string fName = userDto.Picture.FileName;
             Console.WriteLine(fName);
@@ -173,7 +173,7 @@ namespace Controllers
 
             string fName = file.FileName;
             Console.WriteLine(fName);
-            string path = Path.Combine(_environment.ContentRootPath, "Images/" + file.FileName);
+            string path = Path.Combine(_environment.ContentRootPath, "wwwroot/images/" + file.FileName);
             using (var stream = new FileStream(path, FileMode.Create))
             { 
                 await file.CopyToAsync(stream);
