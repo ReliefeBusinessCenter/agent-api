@@ -35,12 +35,12 @@ namespace broker.Dto
         public string Phone { get; set; }
 
         public string Address { get; set; }
-
+s
         public string Picture { get; set; }
 
-        public string Sex { get; set; }
+        // public string Sex { get; set; }
         
-        public string Role { get; set; }
+        // public string Role { get; set; }
 
         public ICollection<Buy> Buys { get; set; }
 
