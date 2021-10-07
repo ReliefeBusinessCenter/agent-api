@@ -30,11 +30,11 @@ namespace Controllers
             return Ok(_mapper.Map<IEnumerable<DeliveryDto>>(model));
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetDeliveryById(int id)
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetDeliveryById(string  email)
         {
-            Console.WriteLine("Returning delivery  of id" + id);
-            var model = await _deliveryRepository.GetDataById(id);
+            Console.WriteLine("Returning delivery  of id" + email);
+            var model = await _deliveryRepository.GetByEmail(email);
             return Ok(_mapper.Map<DeliveryDto>(model));
         }
         
