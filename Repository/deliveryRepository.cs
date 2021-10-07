@@ -45,8 +45,8 @@ namespace broker.Data
             Console.WriteLine("Get  Delivery  method invoked");
             // 
             var data = await _context.Deliveries
-            //  .Include(delivery => delivery.Broker).ThenInclude(broker => broker.User)
-            // .Include(delivery => delivery.Customer).ThenInclude(customer => customer.User)
+             .Include(delivery => delivery.Broker).ThenInclude(broker => broker.User)
+            .Include(delivery => delivery.Customer).ThenInclude(customer => customer.User)
 
 
 
