@@ -43,7 +43,7 @@ namespace Controllers
         {
             Console.WriteLine("Creating delivery");
             var delivery = _mapper.Map<Delivery>(deliveryDto);
-            await _deliveryRepository.UpdateData(delivery);
+            await _deliveryRepository.InsertData(delivery);
             return Ok(deliveryDto);
         }
         // [Authorize(Roles = RoleEntity.Admin)]

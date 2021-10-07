@@ -14,7 +14,7 @@ namespace broker.Models
         public ICollection<Review> Reviews { get; set; }
 
         public ICollection<Deals> Deals { get; set; }
-        public ICollection<Delivery> Delivery { get; set; }
+        public Delivery Delivery { get; set; }
         public ICollection<Sales> Sales { get; set; }
 
         // Navigational properties

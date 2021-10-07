@@ -174,7 +174,8 @@ namespace broker_service.Migrations
 
                     b.HasIndex("BrokerId");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("CustomerId")
+                        .IsUnique();
 
                     b.ToTable("Deliveries");
                 });
@@ -396,8 +397,8 @@ namespace broker_service.Migrations
                         .IsRequired();
 
                     b.HasOne("broker.Models.Customer", "Customer")
-                        .WithMany("Delivery")
-                        .HasForeignKey("CustomerId")
+                        .WithOne("Delivery")
+                        .HasForeignKey("broker.Models.Delivery", "CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

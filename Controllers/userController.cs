@@ -168,6 +168,13 @@ namespace Controllers
             await _userRepository.UpdateData(userModel);
             return Ok(userModel);
         }
+        //  [HttpPost("uploadImage")]
+        // public static void  UploadImage(string path, DriveService service){
+            
+        
+
+           
+        // }
         [HttpPost("uploadfileg")]
         public async Task<string> UploadFile([FromForm] IFormFile file)
         {
@@ -182,6 +189,8 @@ namespace Controllers
             }
             
             return file.FileName;
+
+           
         }
         [HttpGet("getimage")]
 public IActionResult Get(string name)

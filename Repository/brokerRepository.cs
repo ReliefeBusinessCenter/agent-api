@@ -21,6 +21,10 @@ namespace broker.Data
         public async Task<bool> DeleteData(Broker service)
         {
            Console.WriteLine("Delete method invoked");
+
+          
+            _context.Skills.Remove(service.Skills);
+            //  _context.Deliveries.(service.Delivery);
             _context.Brokers.Remove(service);
             await _context.SaveChangesAsync();
             return true;
@@ -99,18 +103,18 @@ namespace broker.Data
               Console.WriteLine("Create data  method invoked");
               Console.WriteLine("Broker", broker);
         // Add user
-        _context.Users.Add(broker.User);
-            await _context.SaveChangesAsync();
+        // _context.Users.Add(broker.User);
+            // await _context.SaveChangesAsync();
              // get user by email
-            User user=await _context.Users .Include(e => e.Buys).FirstOrDefaultAsync(x => x.Email == broker.User.Email);
+            // User user=await _context.Users .Include(e => e.Buys).FirstOrDefaultAsync(x => x.Email == broker.User.Email);
             // Add skills
-            _context.Skills.Add(broker.Skills);
-              await _context.SaveChangesAsync();
+            // _context.Skills.Add(broker.Skills);
+            //   await _context.SaveChangesAsync();
                // get skills by email
             // User user=await _context.Users .Include(e => e.Buys).FirstOrDefaultAsync(x => x.Email == broker.User.Email);
            
             // add broker
-            Broker newBroker=new Broker();
+            // Broker newBroker=new Broker();
             
             
 
@@ -123,7 +127,9 @@ namespace broker.Data
 
         public async Task<Broker> UpdateData(Broker service)
         {
-             throw new System.NotImplementedException();
+              _context.Update(service).Property(x => x.BrokerId).IsModified = false;
+            await _context.SaveChangesAsync();
+            return service;
         }
 
        

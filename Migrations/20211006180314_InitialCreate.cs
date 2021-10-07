@@ -333,7 +333,8 @@ namespace broker_service.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Deliveries_CustomerId",
                 table: "Deliveries",
-                column: "CustomerId");
+                column: "CustomerId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Portfolios_BrokerId",

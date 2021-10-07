@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "Google.Apis.Drive.v2": {
+              "target": "Package",
+              "version": "[1.55.0.2453, )"
+            },
+            "Google.Apis.Drive.v3": {
+              "target": "Package",
+              "version": "[1.55.0.2453, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.9, )"
@@ -72,9 +80,17 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "Microsoft.OpenApi": {
               "target": "Package",
               "version": "[1.2.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
