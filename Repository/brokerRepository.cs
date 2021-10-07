@@ -47,7 +47,7 @@ namespace broker.Data
              .Include(e=>e.Category)
              .Include(e => e.Deals)
               .Include(e => e.Skills)
-             .Include(e => e.Delivery).ThenInclude(e=>e.Customer)
+             .Include(e => e.Delivery).ThenInclude(e=>e.Customer).ThenInclude(e=>e.User)
              .ToListAsync();
             return data;
         }
@@ -66,7 +66,7 @@ namespace broker.Data
              .Include(e => e.Portfolio)
              .Include(e => e.Deals)
            
-            .Include(e => e.Delivery).ThenInclude(e=>e.Customer)
+            .Include(e => e.Delivery).ThenInclude(e=>e.Customer).ThenInclude(e=>e.User)
              .Include(e => e.Review)
               .AsSingleQuery()
              .ToListAsync();

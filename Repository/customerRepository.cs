@@ -52,7 +52,7 @@ namespace broker.Data
             
              .Include(e => e.Deals)
              
-             .Include(e => e.Delivery).ThenInclude(e=>e.Broker)
+             .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              .ToListAsync();
             return data;
         }
@@ -70,7 +70,7 @@ namespace broker.Data
             
              .Include(e => e.Deals)
              
-            .Include(e => e.Delivery).ThenInclude(e=>e.Broker)
+            .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              
              .ToListAsync();
 
