@@ -10,7 +10,7 @@ using broker.Data;
 namespace broker_service.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211006180314_InitialCreate")]
+    [Migration("20211007042550_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -176,8 +176,7 @@ namespace broker_service.Migrations
 
                     b.HasIndex("BrokerId");
 
-                    b.HasIndex("CustomerId")
-                        .IsUnique();
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Deliveries");
                 });
@@ -399,8 +398,8 @@ namespace broker_service.Migrations
                         .IsRequired();
 
                     b.HasOne("broker.Models.Customer", "Customer")
-                        .WithOne("Delivery")
-                        .HasForeignKey("broker.Models.Delivery", "CustomerId")
+                        .WithMany("Delivery")
+                        .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
