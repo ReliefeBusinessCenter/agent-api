@@ -15,6 +15,8 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using ImageUploader.Handler;
+using Azure.Storage.Blobs;
+using AzureBlob.Api.Logics;
 
 namespace broker_service
 {
@@ -34,13 +36,14 @@ namespace broker_service
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(
                 Configuration.GetConnectionString("brokerConnection"),
                  o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)
-                
+
                 ));
-            
+
+
             services.AddControllers();
 
-        //    var appSettingsSection = Configuration.GetSection("AppSettings");
-        //     services.Configure<AppSettings>(appSettingsSection);
+            //    var appSettingsSection = Configuration.GetSection("AppSettings");
+            //     services.Configure<AppSettings>(appSettingsSection);
 
             // configure jwt authentication
             // var appSettings = appSettingsSection.Get<AppSettings>();
@@ -65,10 +68,10 @@ namespace broker_service
                 };
             });
 
-             services.AddControllersWithViews()
+            services.AddControllersWithViews()
 
-            .AddNewtonsoftJson(options =>
-            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+           .AddNewtonsoftJson(options =>
+           options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddCors(option =>
@@ -83,13 +86,17 @@ namespace broker_service
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "broker_service", Description = "Swagger Core API" });
             });
 
-            
+
             services.AddTransient<IImageHandler, ImageHandler>();
-            services.AddTransient<ImageWriter.Interface.IImageWriter, 
+            services.AddTransient<ImageWriter.Interface.IImageWriter,
                                   ImageWriter.Classes.ImageWriter>();
 
-            // services.AddScoped<IRepository<Broker>, BrokerRepository>();
-
+            services.AddScoped<IRepository<Broker>, BrokerRepository>();
+            services.AddScoped(_ =>
+            {
+                return new BlobServiceClient(Configuration.GetConnectionString("AzureBlobStorage"));
+            });
+            services.AddScoped<IFileManagerLogic, FileManagerLogic>();
             services.AddScoped<IRepository<Broker>, BrokerRepository>();
             services.AddScoped<IRepository<User>, UserRepository>();
             services.AddScoped<IRepository<Category>, CategoryRepository>();
@@ -113,7 +120,7 @@ namespace broker_service
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "broker_service v1"));
             }
-app.UseStaticFiles();
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseRouting();

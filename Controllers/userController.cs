@@ -22,6 +22,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using AzureBlob.Api.Logics;
 // using Microsoft.Extensions.Hosting.Internal;
 
 namespace Controllers
@@ -33,6 +34,8 @@ namespace Controllers
     public class UserController : ControllerBase
     {
         private readonly IRepository<User> _userRepository;
+        private readonly IFileManagerLogic _fileManagerLogic;
+
         private readonly IMapper _mapper;
         [Obsolete]
         private static IHostingEnvironment _environment;
@@ -42,12 +45,13 @@ namespace Controllers
 
         // public static IHostingEnvironment Environment { get => _environment; set => _environment = value; }
 
-        public UserController(IRepository<User> repo, IMapper mapper, IOptions<AppSettings> appSettings, IHostingEnvironment environment)
+        public UserController(IRepository<User> repo, IMapper mapper, IOptions<AppSettings> appSettings, IHostingEnvironment environment, IFileManagerLogic fileManagerLogic)
         {
             _userRepository = repo;
             _mapper = mapper;
             _appSettings = appSettings.Value;
             _environment = environment;
+            _fileManagerLogic = fileManagerLogic;
 
 
 
@@ -168,36 +172,63 @@ namespace Controllers
             await _userRepository.UpdateData(userModel);
             return Ok(userModel);
         }
+        // [Route("upload")]
+        // [HttpPost]
+        // public async Task<string> Upload([FromForm] IFormFile file)
+        // {       
+        //     Console.WriteLine("Entered to the image upload");
+
+        //     string fName = model.ImageFile.FileName;
+        //     Console.WriteLine(fName);   
+
+        //     Console.WriteLine("Entered to the image upload");
+        //     if (model.ImageFile != null)
+        //     {
+        //        await  _fileManagerLogic.Upload(model);
+        //     }
+        //     return fName;
+        // }
+
         //  [HttpPost("uploadImage")]
         // public static void  UploadImage(string path, DriveService service){
-            
-        
 
-           
+
+
+
         // }
         [HttpPost("uploadfileg")]
         public async Task<string> UploadFile([FromForm] IFormFile file)
         {
-            Console.WriteLine("Entered tot he image upload");
+            Console.WriteLine("Entered to the image upload");
 
             string fName = file.FileName;
             Console.WriteLine(fName);
-            string path = Path.Combine(_environment.ContentRootPath, "wwwroot/images/" + file.FileName);
-            using (var stream = new FileStream(path, FileMode.Create))
-            { 
-                await file.CopyToAsync(stream);
-            }
-            
+            // string path = Path.Combine(_environment.ContentRootPath, "wwwroot/images/" + file.FileName);
+            // using (var stream = new FileStream(path, FileMode.Create))
+            // { 
+            //     await  _fileManagerLogic.Upload(file);
+            // }
+            await _fileManagerLogic.Upload(file);
+
             return file.FileName;
 
-           
+
+
         }
-        [HttpGet("getimage")]
-public IActionResult Get(string name)
-{
-    var image = System.IO.File.OpenRead(name);
-    return File(image, "image/jpeg");
-}
+
+        //         [HttpGet("getimage")]
+        // public IActionResult Get(string name)
+        // {
+        //     var image = System.IO.File.OpenRead(name);
+        //     return File(image, "image/jpeg");
+        // }
+        [Route("get")]
+        [HttpGet]
+        public async Task<IActionResult> Get(string fileName)
+        {
+            var imgBytes = await _fileManagerLogic.Get(fileName);
+            return File(imgBytes, "image/webp");
+        }
     }
 
 }
