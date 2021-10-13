@@ -34,7 +34,7 @@ namespace broker.Data
              .Include(e => e.Deals)
              
              
-             .Include(e => e.Delivery)
+            .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              .ToListAsync();
 
             return data.FirstOrDefault(x => x.User.Email.Contains(email));
