@@ -13,7 +13,7 @@ namespace broker.Dto
 
       [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CatigoryId { get; set; }
+        public int CategoryId { get; set; }
 
         public string CatigoryName { get; set; }
 

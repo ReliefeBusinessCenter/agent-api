@@ -12,7 +12,7 @@ namespace broker.Profiles
         public CategoryProfile()
         {
             CreateMap<broker.Models.Category, CategoryDto>()
-            .ForMember(dest => dest.CatigoryId, opt => opt.MapFrom(src => src.CategoryId))
+            .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId))
             .ForMember(dest => dest.CatigoryName, opt => opt.MapFrom(src => src.CatigoryName));
             CreateMap<CategoryDto, broker.Models.Category>();
 

@@ -19,7 +19,7 @@ namespace broker.Dto
         public ICollection<Sales> Sales { get; set; }
 
         public Skills Skills { get; set; }
-        public int CatigoryId { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
 
         // navigational properties
