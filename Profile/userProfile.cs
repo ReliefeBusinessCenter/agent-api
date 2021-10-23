@@ -12,8 +12,7 @@ namespace broker.Profiles
             .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
             .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
-            .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password))
-
+            .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password)) 
             .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone))
             .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
             .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
@@ -23,7 +22,7 @@ namespace broker.Profiles
             CreateMap<UserDto, broker.Models.User>();
 
         }
-        //  
+        // 
 
 
 

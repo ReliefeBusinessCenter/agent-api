@@ -16,7 +16,7 @@ namespace broker.Profiles
             
             .ForMember(dest => dest.Review, opt => opt.MapFrom(src => src.Review))
             .ForMember(dest => dest.Skills, opt => opt.MapFrom(src => src.Skills))
-            .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId))
+            .ForMember(dest => dest.CatigoryId, opt => opt.MapFrom(src => src.CategoryId))
             .ForMember(dest => dest.User, opt => opt.MapFrom(src => src.User))
            
             .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category));

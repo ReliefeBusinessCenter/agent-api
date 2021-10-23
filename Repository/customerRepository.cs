@@ -38,6 +38,11 @@ namespace broker.Data
              .ToListAsync();
 
             return data.FirstOrDefault(x => x.User.Email.Contains(email));
+
+
+            
+
+
         }
 
         public async Task<List<Customer>> GetData()
