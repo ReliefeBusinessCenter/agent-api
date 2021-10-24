@@ -30,9 +30,23 @@ namespace broker.Data
             return true;
         }
 
-        public Task<Broker> GetByEmail(string email)
+        public async Task<Broker> GetByEmail(string email)
         {
-            throw new NotImplementedException();
+             // FirstOrDefaultAsync(x => x.BrokerId == id);
+             var data = await _context.Brokers
+             .Include(e => e.User)
+             .Include(e => e.Portfolio)
+             .Include(e => e.Review)
+             .Include(e=>e.Category)
+             .Include(e => e.Deals)
+              .Include(e => e.Skills)
+             .Include(e => e.Delivery).ThenInclude(e=>e.Customer).ThenInclude(e=>e.User)
+             .ToListAsync();
+
+            return data.FirstOrDefault(x => x.User.Email.Contains(email));
+
+
+            
         }
 
         public async Task<List<Broker>> GetData()

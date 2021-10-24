@@ -82,7 +82,7 @@ namespace Controllers
             Console.WriteLine("Authentication Method");
             List<User> users = await _userRepository.GetData();
             var user = users.SingleOrDefault(x => x.Email == model.Email && x.Password == model.Password);
-
+        
             // return null if user not found
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
