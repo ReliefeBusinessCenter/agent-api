@@ -36,10 +36,10 @@ namespace Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetBrokerById(int id)
+        public async Task<IActionResult> GetBrokerById(string email)
         {
-            Console.WriteLine("Returning technician of id" + id);
-            var model = await _brokerRepository.GetDataById(id);
+            Console.WriteLine("Returning technician of id" + email);
+            var model = await _brokerRepository.GetByEmail(email);
             return Ok(_mapper.Map<BrokerDto>(model));
         }
         
