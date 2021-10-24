@@ -35,7 +35,7 @@ namespace Controllers
             return Ok(_mapper.Map<IEnumerable<BrokerDto>>(model));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{email}")]
         public async Task<IActionResult> GetBrokerById(string email)
         {
             Console.WriteLine("Returning technician of id" + email);
