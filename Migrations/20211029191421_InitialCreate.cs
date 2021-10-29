@@ -172,12 +172,14 @@ namespace broker_service.Migrations
                     DealsId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductModel = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PaymentOption = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeliveryOption = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DealsStatus = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BrokerId = table.Column<int>(type: "int", nullable: true),
-                    CustomerId = table.Column<int>(type: "int", nullable: true)
+                    BrokerId = table.Column<int>(type: "int", nullable: false),
+                    CustomerId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -187,13 +189,13 @@ namespace broker_service.Migrations
                         column: x => x.BrokerId,
                         principalTable: "Brokers",
                         principalColumn: "BrokerId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Deals_Customers_CustomerId",
                         column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "CustomerId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

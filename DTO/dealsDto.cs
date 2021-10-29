@@ -13,17 +13,22 @@ namespace broker.Dto
 
      [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int DealsId { get; set; }
+     public int DealsId { get; set; }
         public int Quantity { get; set; }
-        public string Location { get; set; }
+        
+        public string ProductName { get; set; }
+        public string  ProductModel { get; set; }
         public string Color { get; set; }
         public string PaymentOption { get; set; }
+        public string DeliveryOption { get; set; }
         public string DealsStatus { get; set; }
         // navigational property
-     public Broker Broker { get; set; }
-
+       public int BrokerId { get; set; } 
+       
+        public Broker Broker { get; set; }
+        public int CustomerId { get; set; }
+        
         public Customer Customer { get; set; }
-
 
 
 

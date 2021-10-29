@@ -16,7 +16,7 @@ namespace broker_service.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("broker.Models.Broker", b =>
@@ -121,22 +121,28 @@ namespace broker_service.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("BrokerId")
+                    b.Property<int>("BrokerId")
                         .HasColumnType("int");
 
                     b.Property<string>("Color")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CustomerId")
+                    b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
                     b.Property<string>("DealsStatus")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Location")
+                    b.Property<string>("DeliveryOption")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PaymentOption")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductModel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Quantity")
@@ -376,11 +382,15 @@ namespace broker_service.Migrations
                 {
                     b.HasOne("broker.Models.Broker", "Broker")
                         .WithMany("Deals")
-                        .HasForeignKey("BrokerId");
+                        .HasForeignKey("BrokerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("broker.Models.Customer", "Customer")
                         .WithMany("Deals")
-                        .HasForeignKey("CustomerId");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Broker");
 
