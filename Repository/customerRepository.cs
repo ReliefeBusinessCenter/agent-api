@@ -31,7 +31,7 @@ namespace broker.Data
              
              .Include(e => e.Reviews)
             
-             .Include(e => e.Deals)
+             .Include(e => e.Deals).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              
              
             .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
@@ -55,7 +55,7 @@ namespace broker.Data
              
              .Include(e => e.Reviews)
             
-             .Include(e => e.Deals)
+             .Include(e => e.Deals).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              
              .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              .ToListAsync();
@@ -73,7 +73,7 @@ namespace broker.Data
              
              .Include(e => e.Reviews)
             
-             .Include(e => e.Deals)
+             .Include(e => e.Deals).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              
             .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              
