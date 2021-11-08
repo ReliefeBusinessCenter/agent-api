@@ -35,6 +35,14 @@ namespace broker.Data
              
              
             .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
+             .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.Category)
+              .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.Skills)
+            
+// .Include(e => e.User
+            //  .ThenInclude(e => e.Portfolio)
+            //  .ThenInclude(e => e.Review)
+            //  .ThenInclude(e=>e.Category)
+            //  .ThenInclude(e => e.Skills)
              .ToListAsync();
 
             return data.FirstOrDefault(x => x.User.Email.Contains(email));

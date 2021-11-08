@@ -45,7 +45,6 @@ namespace broker.Data
 
             return data.FirstOrDefault(x => x.User.Email.Contains(email));
 
-
             
         }
 
