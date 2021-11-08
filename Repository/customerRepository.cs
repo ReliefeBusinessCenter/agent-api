@@ -34,9 +34,9 @@ namespace broker.Data
              .Include(e => e.Deals).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              
              
-            .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
+            // .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.User)
              .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.Category)
-              .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.Skills)
+            //   .Include(e => e.Delivery).ThenInclude(e=>e.Broker).ThenInclude(e=>e.Skills)
             
 // .Include(e => e.User
             //  .ThenInclude(e => e.Portfolio)
