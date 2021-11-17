@@ -16,16 +16,18 @@ namespace broker.Models
         public ICollection<Deals> Deals { get; set; }
         public ICollection<Review> Review { get; set; }
         public ICollection<Sales> Sales { get; set; }
-
-        public Skills Skills { get; set; }
+        public bool Approved { get; set; }
         
-        public int  CategoryId { get; set; }
+        public string About { get; set; }
+        public Skills Skills { get; set; }
+
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
 
         // navigational properties
-        
+
         public User User { get; set; }
-   }
+    }
 }
 
 

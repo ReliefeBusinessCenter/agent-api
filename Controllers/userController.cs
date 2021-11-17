@@ -81,7 +81,7 @@ namespace Controllers
             // getUsers();
             Console.WriteLine("Authentication Method");
             List<User> users = await _userRepository.GetData();
-            var user = users.SingleOrDefault(x => x.Email == model.Email && x.Password == model.Password);
+            var user = users.SingleOrDefault(x => x.Phone == model.Phone && x.Password == model.Password);
         
             // return null if user not found
             if (user == null)

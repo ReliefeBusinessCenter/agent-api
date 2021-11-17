@@ -21,6 +21,9 @@ namespace broker.Dto
         public Skills Skills { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+         public bool Approved { get; set; }
+        
+        public string About { get; set; }
 
         // navigational properties
 

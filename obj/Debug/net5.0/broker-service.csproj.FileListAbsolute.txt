@@ -226,3 +226,4 @@ C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\brok
 C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\yared\Documents\Company\eXs\agent-app-main\agent-app-main\back-end\broker-service\obj\Debug\net5.0\broker-service.csproj.CopyComplete
