@@ -10,7 +10,7 @@ using broker.Data;
 namespace broker_service.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211029191421_InitialCreate")]
+    [Migration("20211118075519_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,6 +27,12 @@ namespace broker_service.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("About")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Approved")
+                        .HasColumnType("bit");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
@@ -300,13 +306,19 @@ namespace broker_service.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Address")
+                    b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IdentificationCard")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Kebele")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
@@ -322,6 +334,9 @@ namespace broker_service.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sex")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subcity")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId");

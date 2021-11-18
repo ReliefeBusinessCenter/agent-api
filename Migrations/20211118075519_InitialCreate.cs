@@ -45,8 +45,11 @@ namespace broker_service.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Subcity = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Kebele = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Picture = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IdentificationCard = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Sex = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Role = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -61,6 +64,8 @@ namespace broker_service.Migrations
                 {
                     BrokerId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Approved = table.Column<bool>(type: "bit", nullable: false),
+                    About = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SkillsId = table.Column<int>(type: "int", nullable: true),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: true)
