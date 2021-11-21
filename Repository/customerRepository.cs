@@ -23,7 +23,7 @@ namespace broker.Data
             return true;
         }
 
-        public async Task<Customer> GetByEmail(string email) 
+        public async Task<Customer> GetByEmail(string phone) 
         {
              // FirstOrDefaultAsync(x => x.BrokerId == id);
             var data = await _context.Customers
@@ -45,7 +45,7 @@ namespace broker.Data
             //  .ThenInclude(e => e.Skills)
              .ToListAsync();
 
-            return data.FirstOrDefault(x => x.User.Email.Contains(email));
+            return data.FirstOrDefault(x => x.User.Phone.Contains(phone));
 
 
             

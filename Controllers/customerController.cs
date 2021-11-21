@@ -43,10 +43,10 @@ namespace Controllers
         // }
         // get customers by email
         [HttpGet("{email}")]
-        public async Task<IActionResult> GetCustomerByEmail(string email)
+        public async Task<IActionResult> GetCustomerByPhone(string phone)
         {
-            Console.WriteLine("Returning customer of email" + email);
-            var model = await _customerRepository.GetByEmail(email);
+            Console.WriteLine("Returning customer of email" + phone);
+            var model = await _customerRepository.GetByEmail(phone);
             return Ok(_mapper.Map<CustomerDto>(model));
         }
 
