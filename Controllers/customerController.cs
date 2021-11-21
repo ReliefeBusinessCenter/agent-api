@@ -42,7 +42,7 @@ namespace Controllers
         //     return Ok(_mapper.Map<CustomerDto>(model));
         // }
         // get customers by email
-        [HttpGet("{email}")]
+        [HttpGet("{phone}")]
         public async Task<IActionResult> GetCustomerByPhone(string phone)
         {
             Console.WriteLine("Returning customer of email" + phone);
