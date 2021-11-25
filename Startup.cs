@@ -96,6 +96,7 @@ namespace broker_service
             {
                 return new BlobServiceClient(Configuration.GetConnectionString("AzureBlobStorage"));
             });
+
             services.AddScoped<IFileManagerLogic, FileManagerLogic>();
             services.AddScoped<IRepository<Broker>, BrokerRepository>();
             services.AddScoped<IRepository<User>, UserRepository>();
@@ -109,6 +110,7 @@ namespace broker_service
             services.AddScoped<IRepository<Sales>, SalesRepository>();
             services.AddScoped<IRepository<Buy>, BuyRepository>();
             services.AddScoped<IRepository<City>, CityRepository>();
+            services.AddScoped<IRepository<Saving>, SavingRepository>();
         }
 
 

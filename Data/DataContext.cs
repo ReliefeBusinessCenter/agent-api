@@ -24,6 +24,7 @@ namespace broker.Data
 
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Skills> Skills { get; set; }
+         public DbSet<Saving> Savings { get; set; }
         public DbSet<Deals> Deals { get; set; }
         public DbSet<Delivery> Deliveries { get; set; }
         public DbSet<Buy> Buys { get; set; }

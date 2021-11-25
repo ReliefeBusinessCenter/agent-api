@@ -288,6 +288,30 @@ namespace broker_service.Migrations
                     b.ToTable("Sales");
                 });
 
+            modelBuilder.Entity("broker.Models.Saving", b =>
+                {
+                    b.Property<int>("SavingId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IdentificationCard")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SavingId");
+
+                    b.ToTable("Savings");
+                });
+
             modelBuilder.Entity("broker.Models.Skills", b =>
                 {
                     b.Property<int>("SkillsId")

@@ -33,6 +33,22 @@ namespace broker_service.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Savings",
+                columns: table => new
+                {
+                    SavingId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Picture = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IdentificationCard = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Savings", x => x.SavingId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Skills",
                 columns: table => new
                 {
@@ -403,6 +419,9 @@ namespace broker_service.Migrations
 
             migrationBuilder.DropTable(
                 name: "Sales");
+
+            migrationBuilder.DropTable(
+                name: "Savings");
 
             migrationBuilder.DropTable(
                 name: "Brokers");
