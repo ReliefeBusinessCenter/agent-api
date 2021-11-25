@@ -17,14 +17,7 @@ namespace broker.Profiles
             CreateMap<CategoryDto, broker.Models.Category>();
 
         }
-        //  
-
-
-
-
-
-
-
+     
     }
 
 }

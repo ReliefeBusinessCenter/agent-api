@@ -103,6 +103,21 @@ namespace broker_service.Migrations
                     b.ToTable("Catigories");
                 });
 
+            modelBuilder.Entity("broker.Models.City", b =>
+                {
+                    b.Property<int>("CityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CityId");
+
+                    b.ToTable("Cities");
+                });
+
             modelBuilder.Entity("broker.Models.Customer", b =>
                 {
                     b.Property<int>("CustomerId")

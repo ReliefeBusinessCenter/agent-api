@@ -10,7 +10,7 @@ using broker.Data;
 namespace broker_service.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211118075519_InitialCreate")]
+    [Migration("20211125081424_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -103,6 +103,21 @@ namespace broker_service.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("Catigories");
+                });
+
+            modelBuilder.Entity("broker.Models.City", b =>
+                {
+                    b.Property<int>("CityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CityId");
+
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("broker.Models.Customer", b =>

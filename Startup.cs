@@ -108,6 +108,7 @@ namespace broker_service
             services.AddScoped<IRepository<Customer>, CustomerRepository>();
             services.AddScoped<IRepository<Sales>, SalesRepository>();
             services.AddScoped<IRepository<Buy>, BuyRepository>();
+            services.AddScoped<IRepository<City>, CityRepository>();
         }
 
 

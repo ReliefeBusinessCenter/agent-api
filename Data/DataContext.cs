@@ -18,6 +18,8 @@ namespace broker.Data
         public DbSet<Broker> Brokers { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Category> Catigories { get; set; }
+
+          public DbSet<City> Cities { get; set; }
         public DbSet<Portfolio> Portfolios { get; set; }
 
         public DbSet<Review> Reviews { get; set; }
