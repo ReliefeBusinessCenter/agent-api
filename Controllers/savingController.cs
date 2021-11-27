@@ -31,7 +31,7 @@ namespace Controllers
         public async Task<IActionResult> GetSaving()
         {
             var model = await _savingRepository.GetData();
-            return Ok(_mapper.Map<IEnumerable<CityDto>>(model));
+            return Ok(_mapper.Map<IEnumerable<SavingDto>>(model));
         }
 
         [HttpGet("{id}")]
@@ -39,7 +39,7 @@ namespace Controllers
         {
             Console.WriteLine("Returning technician of id" + id);
             var model = await _savingRepository.GetDataById(id);
-            return Ok(_mapper.Map<CityDto>(model));
+            return Ok(_mapper.Map<SavingDto>(model));
         }
         //  [Authorize(AuthenticationSchemes=JwtBearerDefaults.AuthenticationScheme,Roles = "Admin")]
         [HttpPost]
