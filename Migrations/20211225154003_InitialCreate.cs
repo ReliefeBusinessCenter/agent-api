@@ -80,7 +80,9 @@ namespace broker_service.Migrations
                     Picture = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IdentificationCard = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Sex = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Latitude = table.Column<double>(type: "float", nullable: false),
+                    Longtiude = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {

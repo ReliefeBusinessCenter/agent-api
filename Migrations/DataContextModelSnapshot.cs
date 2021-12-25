@@ -358,6 +358,12 @@ namespace broker_service.Migrations
                     b.Property<string>("Kebele")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Longtiude")
+                        .HasColumnType("float");
+
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 

@@ -10,7 +10,7 @@ using broker.Data;
 namespace broker_service.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211127121621_InitialCreate")]
+    [Migration("20211225154003_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -359,6 +359,12 @@ namespace broker_service.Migrations
 
                     b.Property<string>("Kebele")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Longtiude")
+                        .HasColumnType("float");
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
