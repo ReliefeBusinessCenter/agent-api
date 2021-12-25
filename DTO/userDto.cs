@@ -29,6 +29,8 @@ namespace broker.Dto
         public string Subcity { get; set; }
         public string Kebele { get; set; }
         public string IdentificationCard { get; set; }
+        public double  Latitude { get; set; }
+        public double  Longtiude { get; set; }
 
 
 

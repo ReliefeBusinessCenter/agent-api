@@ -64,7 +64,7 @@ namespace Controllers
         //   [Authorize(AuthenticationSchemes=JwtBearerDefaults.AuthenticationScheme,Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSavings(int id, SavingDto savingDto)
-        {
+        {   
             // Console.WriteLine(technician.AccepteStatus);
             var saving = _mapper.Map<Saving>(savingDto);
             await _savingRepository.UpdateData(saving);

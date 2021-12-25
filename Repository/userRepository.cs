@@ -41,9 +41,9 @@ namespace broker.Data
             return await _context.Users .Include(e => e.Buys).FirstOrDefaultAsync(x => x.UserId == id);
         }
 
-        public async Task<User> GetByEmail(string email)
+        public async Task<User> GetByEmail(string phone)
         {
-            return await _context.Users .Include(e => e.Buys).FirstOrDefaultAsync(x => x.Email == email);
+            return await _context.Users .Include(e => e.Buys).FirstOrDefaultAsync(x => x.Phone == phone);
         }
 
         async Task<User> IRepository<User>.InsertData(User user)

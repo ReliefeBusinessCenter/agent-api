@@ -33,6 +33,8 @@ namespace broker.Models
         public string Role { get; set; }
 
         public ICollection<Buy> Buys { get; set; }
+        public double  Latitude { get; set; }
+        public double  Longtiude { get; set; }
 
 
 
