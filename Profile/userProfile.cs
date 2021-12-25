@@ -22,8 +22,8 @@ namespace broker.Profiles
             .ForMember(dest => dest.Subcity, opt => opt.MapFrom(src => src.Subcity))
             .ForMember(dest => dest.Kebele, opt => opt.MapFrom(src => src.Kebele))
               .ForMember(dest => dest.Subcity, opt => opt.MapFrom(src => src.Subcity))
-            .ForMember(dest => dest.Latitude, opt => opt.MapFrom(src => src.Latitude))
-            .ForMember(dest => dest.Longtiude, opt => opt.MapFrom(src => src.Longtiude))
+            // .ForMember(dest => dest.Latitude, opt => opt.MapFrom(src => src.Latitude))
+            // .ForMember(dest => dest.Longtiude, opt => opt.MapFrom(src => src.Longtiude))
             .ForMember(dest => dest.IdentificationCard, opt => opt.MapFrom(src => src.IdentificationCard));
             CreateMap<UserDto, broker.Models.User>();
 
