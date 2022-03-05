@@ -204,12 +204,15 @@ namespace Controllers
 
             string fName = file.FileName;
             Console.WriteLine(fName);
-            // string path = Path.Combine(_environment.ContentRootPath, "wwwroot/images/" + file.FileName);
-            // using (var stream = new FileStream(path, FileMode.Create))
-            // { 
-            //     await  _fileManagerLogic.Upload(file);
-            // }
-            await _fileManagerLogic.Upload(file);
+            
+            string path = Path.Combine(_environment.ContentRootPath, "wwwroot/images/" + file.FileName);
+            using (var stream = new FileStream(path, FileMode.Create))
+            { 
+                // await  _fileManagerLogic.Upload(file);
+                file.CopyTo(stream);  
+            }
+            
+            // await _fileManagerLogic.Upload(file);
 
             return file.FileName;
 
@@ -217,19 +220,19 @@ namespace Controllers
 
         }
 
-        //         [HttpGet("getimage")]
-        // public IActionResult Get(string name)
-        // {
-        //     var image = System.IO.File.OpenRead(name);
-        //     return File(image, "image/jpeg");
-        // }
-        [Route("get")]
-        [HttpGet]
-        public async Task<IActionResult> Get(string fileName)
+                [HttpGet("getimage")]
+        public IActionResult Get(string name)
         {
-            var imgBytes = await _fileManagerLogic.Get(fileName);
-            return File(imgBytes, "image/webp");
+            var image = System.IO.File.OpenRead("wwwroot/images/" + name);
+            return File(image, "image/jpeg");
         }
+        // [Route("get")]
+        // [HttpGet]
+        // public async Task<IActionResult> Get(string fileName)
+        // {
+        //     var imgBytes = await _fileManagerLogic.Get(fileName);
+        //     return File(imgBytes, "image/webp");
+        // }
     }
 
 }

@@ -18,7 +18,8 @@ namespace AzureBlob.Api.Logics
         }
 
         public async Task Upload([FromForm] IFormFile model)
-        {
+        {   
+            // FileUpload1.PostedFile.SaveAs(Server.MapPath(filePath));
             var blobContainer = _blobServiceClient.GetBlobContainerClient("upload");
 
             var blobClient = blobContainer.GetBlobClient(model.FileName);
