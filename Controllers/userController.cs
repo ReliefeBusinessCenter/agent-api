@@ -45,7 +45,7 @@ namespace Controllers
         private readonly AppSettings _appSettings;
 
         // public static IHostingEnvironment Environment { get => _environment; set => _environment = value; }
-
+                                 
         public UserController(IRepository<User> repo, IMapper mapper, IOptions<AppSettings> appSettings, IHostingEnvironment environment, IFileManagerLogic fileManagerLogic)
         {
             _userRepository = repo;

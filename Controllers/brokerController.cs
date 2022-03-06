@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Controllers
 {   
-    // [Authorize]
+    [Authorize]
    
     [ApiController]
      [Route("api/brokers")]
@@ -26,7 +26,7 @@ namespace Controllers
             _brokerRepository = repo;
             _mapper = mapper;
         }
-        //   [Authorize(AuthenticationSchemes=JwtBearerDefaults.AuthenticationScheme,Roles = "Customer")]
+          [Authorize(AuthenticationSchemes=JwtBearerDefaults.AuthenticationScheme,Roles = "Customer,Admin")]
         [HttpGet]
         public async Task<IActionResult> GetBrokers()
         {   
