@@ -10,7 +10,7 @@ using broker.Data;
 namespace broker_service.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211225154003_InitialCreate")]
+    [Migration("20220318221320_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
