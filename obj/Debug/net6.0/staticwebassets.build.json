@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8dYE187FAkGGviu40ERie7Rar2GYqRnE4WpcM0zd3+Y=",
+  "Hash": "RdWQFNnq6c+jC0iM5ecBan3O8F1FduNvpoiedre/aVg=",
   "Source": "broker-service",
   "BasePath": "_content/broker-service",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "broker-service/wwwroot",
       "Source": "broker-service",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/images/b749459a-26a9-42a8-95bc-6713b8a032a4.jpg",
+      "Identity": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/images/b749459a-26a9-42a8-95bc-6713b8a032a4.jpg",
       "SourceId": "broker-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "RelativePath": "images/b749459a-26a9-42a8-95bc-6713b8a032a4.jpg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot/images/b749459a-26a9-42a8-95bc-6713b8a032a4.jpg"
     },
     {
-      "Identity": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/images/de8c68df-9199-44b3-bff5-4bea7de718ae.jpg",
+      "Identity": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/images/de8c68df-9199-44b3-bff5-4bea7de718ae.jpg",
       "SourceId": "broker-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "RelativePath": "images/de8c68df-9199-44b3-bff5-4bea7de718ae.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot/images/de8c68df-9199-44b3-bff5-4bea7de718ae.jpg"
     },
     {
-      "Identity": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/images/DSC_05429.jpg",
+      "Identity": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/images/DSC_05429.jpg",
       "SourceId": "broker-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "RelativePath": "images/DSC_05429.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/images/DSC_05429.jpg"
     },
     {
-      "Identity": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/images/elu1.jpg",
+      "Identity": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/images/elu1.jpg",
       "SourceId": "broker-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "RelativePath": "images/elu1.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/images/elu1.jpg"
     },
     {
-      "Identity": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/images/f949754ea0a090082ced09f77a868630.jpg",
+      "Identity": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/images/f949754ea0a090082ced09f77a868630.jpg",
       "SourceId": "broker-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "RelativePath": "images/f949754ea0a090082ced09f77a868630.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/images/f949754ea0a090082ced09f77a868630.jpg"
     },
     {
-      "Identity": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/images/photo_2021-07-30_05-30-40.jpg",
+      "Identity": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/images/photo_2021-07-30_05-30-40.jpg",
       "SourceId": "broker-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "RelativePath": "images/photo_2021-07-30_05-30-40.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/images/photo_2021-07-30_05-30-40.jpg"
     },
     {
-      "Identity": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/images/photo_2021-08-13_13-54-58.jpg",
+      "Identity": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/images/photo_2021-08-13_13-54-58.jpg",
       "SourceId": "broker-service",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/wwwroot/",
+      "ContentRoot": "/Users/apple/Documents/Company/reliefe/agent-api/wwwroot/",
       "BasePath": "_content/broker-service",
       "RelativePath": "images/photo_2021-08-13_13-54-58.jpg",
       "AssetKind": "All",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t8lBOQ7p+PAAXd2zPdTyrFYDX3Uz/o4WN7ZtCbt2Uqkcy/0IhPk/ObVTT09IB4dC53Eb6kqlScf0AqLkpHkTEg==",
+  "dgSpecHash": "eSBBHBXPG3QmYtFMYF5YxbjIsSYoqkHKiF8ZJVbWhPlH18qs4rTr1dXTBPf/AGNWUSVkKlF7iqI6X78iy5LaVw==",
   "success": true,
-  "projectFilePath": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/broker-service.csproj",
+  "projectFilePath": "/Users/apple/Documents/Company/reliefe/agent-api/broker-service.csproj",
   "expectedPackageFiles": [
     "/Users/apple/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/apple/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

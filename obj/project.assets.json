@@ -9477,11 +9477,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/broker-service.csproj",
+      "projectUniqueName": "/Users/apple/Documents/Company/reliefe/agent-api/broker-service.csproj",
       "projectName": "broker-service",
-      "projectPath": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/broker-service.csproj",
+      "projectPath": "/Users/apple/Documents/Company/reliefe/agent-api/broker-service.csproj",
       "packagesPath": "/Users/apple/.nuget/packages/",
-      "outputPath": "/Users/apple/Documents/Company/eXs/agent-app-main/agent-app-main/back-end/broker-service/obj/",
+      "outputPath": "/Users/apple/Documents/Company/reliefe/agent-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/apple/.nuget/NuGet/NuGet.Config"
