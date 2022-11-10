@@ -18,6 +18,7 @@ namespace broker.Data
         public async Task<bool> DeleteData(Customer customer)
         {
            Console.WriteLine("Delete method invoked");
+            _context.Users.Remove(customer.User);
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
             return true;

@@ -24,8 +24,10 @@ namespace broker.Data
 
           
             _context.Skills.Remove(service.Skills);
+            _context.Users.Remove(service.User);
             //  _context.Deliveries.(service.Delivery);
             _context.Brokers.Remove(service);
+
             await _context.SaveChangesAsync();
             return true;
         }
