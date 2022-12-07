@@ -4,13 +4,10 @@ using broker.Data;
 using broker.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
-using broker.Helpers;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -33,12 +30,14 @@ namespace broker_service
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(
-                Configuration.GetConnectionString("brokerConnection"),
-                 o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)
+            // services.AddDbContext<DataContext>(opt => opt.UseSqlServer(
+            //     Configuration.GetConnectionString("brokerConnection"),
+            //      o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)
 
-                ));
-
+            //     ));
+     var sqlConnectionString = Configuration.GetConnectionString("PostgreSqlConnectionString");
+  
+            services.AddDbContext<DataContext>(options => options.UseNpgsql(sqlConnectionString));  
 
             services.AddControllers();
 
