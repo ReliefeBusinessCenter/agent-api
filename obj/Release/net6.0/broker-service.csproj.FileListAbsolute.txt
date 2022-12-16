@@ -160,3 +160,5 @@
 /Users/apple/Documents/Company/reliefe/agent-api/obj/Release/net6.0/broker-service.pdb
 /Users/apple/Documents/Company/reliefe/agent-api/obj/Release/net6.0/broker-service.genruntimeconfig.cache
 /Users/apple/Documents/Company/reliefe/agent-api/obj/Release/net6.0/ref/broker-service.dll
+/Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/Npgsql.dll
+/Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

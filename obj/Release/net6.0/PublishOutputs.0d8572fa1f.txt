@@ -57,6 +57,8 @@
 /Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Microsoft.Win32.SystemEvents.dll
 /Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Newtonsoft.Json.dll
 /Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Newtonsoft.Json.Bson.dll
+/Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Npgsql.dll
+/Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.Swagger.dll
 /Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/apple/Documents/Company/reliefe/agent-api/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
